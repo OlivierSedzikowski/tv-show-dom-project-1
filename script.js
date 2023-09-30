@@ -6,7 +6,16 @@ function setup() {
 
 function makePageForEpisodes(episodeList) {
   const rootElem = document.getElementById("root");
-  rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+  //add search bar
+const searchBar = document.createElement("input");
+rootElem.appendChild(searchBar);
+  // display number of episodes
+  const displayEp = document.createElement("p");
+  rootElem.appendChild(displayEp);
+  displayEp.innerText = "test-text" + "73 episodes";
+
+  // main div
   const container = document.createElement("div");
   rootElem.appendChild(container);
   container.setAttribute("class", "container");
